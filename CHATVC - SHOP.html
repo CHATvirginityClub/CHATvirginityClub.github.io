@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CHAT VIRGINITY CLUB</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			.sidebar {
+ 			height: 100%;
+  			width: 180px;
+  			position: fixed;
+  			z-index: 1;
+  			top: 0;
+  			left: 0;
+  			background-color: #111;
+  			overflow-x: hidden;
+  			padding-top: 16px;
+			}
+
+			.sidebar a {
+  			padding: 6px 8px 6px 16px;
+  			text-decoration: none;
+  			font-weight: bold;
+  			font-size: 20px;
+  			color: #818181;
+  			display: block;
+			font-family: verdana;
+			}
+
+			.sidebar a:hover {
+  			color: #f1f1f1;
+			}
+
+			.main {
+  			margin-left: 160px;
+  			padding: 0px 10px;
+			}
+			
+			.icon {
+			width: 15px;
+			filter: brightness(50%)
+			}
+			
+			img:hover {
+			filter: brightness(100%);
+			}
+			
+			.title {
+			font-family: verdana;
+			font-size: 100px;
+			margin-left: 220px;
+			color: white;
+			}
+			
+			body {
+			background-image: url(images/bg3.png);
+			background-attachment: fixed;
+			background-repeat:no-repeat;
+    		background-size:cover;
+			}
+			
+			.column {
+			margin-left: 265px;
+  			float: left;
+  			width: 100px;
+  			padding: 10px;
+  			margin-bottom: 75px;
+			}
+
+			.column img {
+  			opacity: 0.8; 
+  			cursor: pointer; 
+  			filter: grayscale(100%);
+  			width: 200px;
+			}
+
+			.column img:hover {
+  			opacity: 1;
+  			filter: grayscale(0%);
+			}
+
+			.row:after {
+  			content: "";
+  			display: table;
+  			clear: both;
+			}
+
+			.container {
+  			position: relative;
+  			display: none;
+			}
+
+			.closebtn {
+			position: relative;
+			margin-right: 400px;
+			margin-left: 1204px;
+  			color: white;
+  			background-color: rgba(0, 0, 0, 0.2);
+  			padding-left: 10px;
+    		padding-right: 10px;
+  			font-size: 35px;
+  			cursor: pointer;
+  			border-radius: 2px;
+			}
+			
+			#expandedImg {
+			width: 60%;
+			margin-right: 330px;
+			margin-left: 390px;
+			border-radius: 2px;
+			}
+
+			.image {
+  			display: block;
+  			width: 100%;
+ 			height: auto;
+ 			border-radius: 2px;
+			}
+			
+			.title2 {
+  			color: white;
+  			font-size: 18px;
+  			font-family: verdana;
+			}
+
+			.overlay {
+  			position: absolute;
+  			width: 50%;
+  			margin-left: 390px;
+  			padding-right: 143px;
+  			margin-top: 10px;
+  			bottom: 100%;
+  			left: 0;
+ 			right: 0;
+ 			background-color: #008CBA;
+  			overflow: hidden;
+  			height:0;
+  			transition: 1s ease;
+  			border-radius: 2px;
+			}
+
+			.container:hover .overlay {
+  			bottom: 0;
+  			height: 94.5%;
+  			border-radius: 2px;
+			}
+
+			.text {
+  			color: white;
+  			font-family: verdana;
+  			font-size: 20px;
+  			position: absolute;
+  			top: 50%;
+  			left: 50%;
+ 			-webkit-transform: translate(-50%, -50%);
+ 		 	-ms-transform: translate(-50%, -50%);
+  			transform: translate(-50%, -50%);
+  			text-align: center;
+  			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="sidebar" class="sidebar">
+  			<a href="CHATVC%20-%20HOME.html"><i class="fa fa-fw fa-home"></i><img class="icon" src="images/homeiconn.png"> Home</a>
+  			<a href="CHATVC%20-%20SHOP.html"><i class="fa fa-fw fa-shop"></i><img class="icon" src="images/shopicon.png"> Shop</a>  			  			
+  			<a href="Q&A.html"><i class="fa fa-fw fa-qa"></i><img class="icon" src="images/qaicon.png"> Q&A</a>
+  			<a href="CHATVC%20-%20CONTACT.html"><i class="fa fa-fw fa-mail"></i><img class="icon" src="images/mailiconn.png"> Contact</a>		
+		</div>
+		
+		<h1 class="title">Our Products.<h1>
+		
+		<div class="row">
+			<div class="column">
+				<p class="title2">#AlwaysReppin' CHAT Condom $0.69</p>
+    			<img class="image" src="images/condom.jpg" onclick="myFunction(this);">
+  			</div>
+  			<div class="column">
+  				<p class="title2">Anti-Fap Magen David $613.00</p>
+    			<img class="image" src="images/cursed.png" onclick="myFunction(this);">
+ 			</div>
+  			<div class="column">
+				<p class="title2">BB-chan Body Pillow $42.0</p>
+    			<img class="image" src="images/bb.png" onclick="myFunction(this);">
+  			</div>
+  		</div>
+  		<div class="row">
+  			<div class="column">
+    			<img class="image" src="images/xxxxx.png" onclick="myFunction(this);">
+  			</div>
+  			<div class="column">
+    			<img class="image" src="images/xxxxx.png" onclick="myFunction(this);">
+  			</div>
+		</div>
+		
+		<div class="container">
+  			<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+			<img id="expandedImg">
+			<img class="image">
+  			</div>
+  		</div>
+		
+		<script>
+			function myFunction(imgs) {
+ 			var expandImg = document.getElementById("expandedImg");
+  			expandImg.src = imgs.src;
+  			expandImg.parentElement.style.display = "block";
+			}
+		</script>
+
+	</body>
+</html>
